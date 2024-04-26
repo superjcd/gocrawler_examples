@@ -7,6 +7,6 @@ import (
 
 func main() {
 	config := default_builder.DefaultWorkerBuilderConfig{}
-	worker := config.Name("zyte").MaxRunTime(300).Workers(10).LimitRate(10).Build(parser.NewZyteParser())
+	worker := config.Name("zyte").MaxRunTime(300).Workers(10).LimitRate(10).Build(parser.NewZyteReqParser())
 	worker.Run()
 }
